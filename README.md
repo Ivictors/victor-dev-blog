@@ -55,5 +55,4 @@ O computador local não precisa ficar ligado: o GitHub Pages serve os arquivos e
 
 ## Contato
 
-- [GitHub](https://github.com/Ivictors)
 - [LinkedIn](https://www.linkedin.com/in/vi-marques/)
