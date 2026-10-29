@@ -1,0 +1,43 @@
+menu:
+  - title: Início
+    path: /pt/
+    icon: fa-solid fa-house
+  - title: Blog
+    path: /pt/blog/
+    icon: fa-regular fa-newspaper
+  - title: Projetos
+    path: https://github.com/Ivictors
+    icon: fa-solid fa-code
+    target: _blank
+  - title: Assuntos
+    path: /pt/tags/
+    icon: fa-solid fa-tags
+  - title: Mapa do site
+    path: /pt/sitemap/
+    icon: fa-solid fa-sitemap
+  - title: Sobre
+    path: /pt/about/
+    icon: fa fa-thumbs-up
+ui:
+  language: Idioma
+  readArticles: Ler artigos
+  viewProjects: Ver projetos
+  description: Artigos sobre Java, Quarkus, engenharia de software e contribuições open source.
+  tagsIntro: Explore os artigos por assunto.
+  noPosts: Nenhum artigo publicado ainda.
+  sitemapIntro: Páginas deste blog em português.
+  blog: Blog
+  about: Sobre
+  tags: Assuntos
+  sitemap: Mapa do site
+  feed: RSS
+  menu: Menu
+  darkMode: Alternar modo escuro
+  share: Compartilhar
+  contact: Contato
+  job: Desenvolvedor backend Java
+tagAlternates:
+  java: /en/posts/tag/java/
+  quarkus: /en/posts/tag/quarkus/
+  open-source: /en/posts/tag/open-source/
+  concorrencia: /en/posts/tag/concurrency/

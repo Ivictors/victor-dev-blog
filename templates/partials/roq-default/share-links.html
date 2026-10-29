@@ -1,0 +1,8 @@
+<div class="page-share">
+  <span class="page-share-label">{=cdi:i18n.get(page.data.locale ?: 'pt').ui.share}</span>
+  <div class="page-share-links">
+    {#for link in social:share(site.data)}
+      <a href="{=link.url(page.title, page.url.absolute)}" title="{=link.label}" aria-label="{=link.label}" rel="nofollow noopener noreferrer" target="_blank"><i class="{=link.icon}" aria-hidden="true"></i></a>
+    {/for}
+  </div>
+</div>

@@ -1,0 +1,41 @@
+---
+layout: main
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.DocumentPage page}
+<article class="article-page">
+  <section class="page-content">
+    <section class="wrap-content">
+      {#include partials/roq-default/page-header.html /}
+      <section class="content-prose">{#insert /}</section>
+      <div class="page-footer">
+        <div class="footer-links">
+          {#include partials/roq-default/share-links.html /}
+          <div class="page-tag">
+            {#for tag in page.data.tags.asStrings}
+              {#let tagSlug=tag.slugify}
+                <a href="{=site.url('/' + page.data.locale + '/posts/tag/' + tagSlug + '/')}" class="tag">&#35; {=tagSlug}</a>
+              {/let}
+            {/for}
+          </div>
+        </div>
+        {#if page.data.author??}
+          {#let author=cdi:authors.get(page.data.author)}
+            {#if author}
+              <div class="author">
+                {#if author.avatar??}
+                  <img src="{=site.image(author.avatar)}" alt="{=author.name}">
+                {#else}
+                  <img src="{=site.image('roq-default/default-avatar.svg')}" alt="{=author.name}">
+                {/if}
+                <div class="author-data">
+                  <a target="_blank" rel="noopener noreferrer" href="{=author.profile}" class="author-name">{=author.name}</a>
+                  <span class="author-job-title">{=cdi:i18n.get(page.data.locale).ui.job}</span>
+                </div>
+              </div>
+            {/if}
+          {/let}
+        {/if}
+      </div>
+    </section>
+  </section>
+</article>

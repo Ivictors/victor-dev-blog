@@ -1,0 +1,15 @@
+---
+title: Assuntos
+description: Encontre artigos por assunto.
+lang: pt-BR
+locale: pt
+alternate: /en/tags/
+aliases: [/tags/]
+layout: page
+---
+<p>{=cdi:i18n.pt.ui.tagsIntro}</p>
+<ul>
+  {#for tag in site.collections.get('posts_pt').tagsCount}
+    <li><a href="{=site.url('/pt/posts/tag/' + tag.name + '/')}">{=tag.name}</a> ({=tag.count})</li>
+  {/for}
+</ul>

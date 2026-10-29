@@ -1,0 +1,50 @@
+---
+theme-layout: main
+---
+{#insert /}
+
+{#description}<p>{=cdi:i18n.get(page.data.locale ?: 'pt').ui.description}</p>{/description}
+
+{#menu}
+{#include partials/roq-default/sidebar-menu menu=cdi:i18n.get(page.data.locale ?: 'pt').menu menuTitle=cdi:i18n.get(page.data.locale ?: 'pt').ui.menu /}
+<nav class="language-switch" aria-label="{=cdi:i18n.get(page.data.locale ?: 'pt').ui.language}">
+  {#if page.data.locale is 'en'}
+  {#if page.data.tag??}
+  <a href="{=site.url(cdi:i18n.en.tagAlternates.get(page.data.tag))}" lang="pt-BR">Português</a> · <strong lang="en">English</strong>
+  {#else}
+  <a href="{=site.url(page.data.alternate ?: '/pt/')}" lang="pt-BR">Português</a> · <strong lang="en">English</strong>
+  {/if}
+  {#else}
+  {#if page.data.tag??}
+  <strong lang="pt-BR">Português</strong> · <a href="{=site.url(cdi:i18n.pt.tagAlternates.get(page.data.tag))}" lang="en">English</a>
+  {#else}
+  <strong lang="pt-BR">Português</strong> · <a href="{=site.url(page.data.alternate ?: '/en/')}" lang="en">English</a>
+  {/if}
+  {/if}
+</nav>
+{/menu}
+
+{#contact}
+<section class="contact">
+  <h3 class="section-title contact-title">{=cdi:i18n.get(page.data.locale ?: 'pt').ui.contact}</h3>
+  <ul>
+    {#for link in social:contact(site.data)}
+    <li><a href="{=link.url}" target="_blank" rel="noopener noreferrer" aria-label="{=link.url}"><i class="{=link.icon}" aria-hidden="true"></i></a></li>
+    {/for}
+  </ul>
+</section>
+{/contact}
+
+{#darkmode}<button class="dark-mode-toggle" aria-label="{=cdi:i18n.get(page.data.locale ?: 'pt').ui.darkMode}"><i class="fas fa-moon"></i></button>{/darkmode}
+
+{#head}
+{#if page.data.tag??}
+  <link rel="alternate" hreflang="{=page.data.locale is 'en' ? 'pt-BR' : 'en'}" href="{=site.url(cdi:i18n.get(page.data.locale).tagAlternates.get(page.data.tag)).absolute}">
+{#else if page.data.alternate??}
+  <link rel="alternate" hreflang="{=page.data.locale is 'en' ? 'pt-BR' : 'en'}" href="{=site.url(page.data.alternate).absolute}">
+{/if}
+{#if page.data.locale??}
+  <link rel="alternate" hreflang="{=page.data.lang}" href="{=page.url.absolute}">
+  <link rel="alternate" type="application/rss+xml" href="{=site.url('/' + page.data.locale + '/rss.xml')}" title="{=site.title} — {=page.data.locale}">
+{/if}
+{/head}

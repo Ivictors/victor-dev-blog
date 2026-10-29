@@ -1,0 +1,1 @@
+{#include partials/rss-localized.html locale='pt' collectionName='posts_pt' feedPath='/rss.xml' /}

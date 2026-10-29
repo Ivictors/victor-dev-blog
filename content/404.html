@@ -1,4 +1,16 @@
 ---
-layout: 404
-image: logo.svg
+title: Page not found / Página não encontrada
+description: Choose a language to return to the blog. Escolha um idioma para voltar ao blog.
+layout: default
+lang: en
+link: /404.html
 ---
+<main class="language-chooser">
+  <h1>Page not found / Página não encontrada</h1>
+  <p lang="en">Choose a language to return to the blog.</p>
+  <p lang="pt-BR">Escolha um idioma para voltar ao blog.</p>
+  <nav aria-label="Language / Idioma">
+    <a class="btn btn-primary" href="{=site.url('/pt/')}" lang="pt-BR">Português</a>
+    <a class="btn btn-secondary" href="{=site.url('/en/')}" lang="en">English</a>
+  </nav>
+</main>

@@ -1,24 +1,3 @@
-items:
-  - title: "Home"
-    path: "/"
-    icon: "fa-solid fa-house"
-  - title: "Blog"
-    path: "/blog"
-    icon: "fa-regular fa-newspaper"
-  - title: "Projects"
-    path: "https://github.com/Ivictors"
-    icon: "fa-solid fa-code"
-    target: "_blank"
-  - title: "Tags"
-    path: "/tags"
-    icon: "fa-solid fa-tags"
-  - title: "About"
-    path: "/about"
-    icon: "fa fa-thumbs-up"
-
-
-
-
-
-
-
+# The default Roq theme validates this bean at build time.
+# Visible menus are loaded from data/i18n/pt.yaml and data/i18n/en.yaml.
+items: []

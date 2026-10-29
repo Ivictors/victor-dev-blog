@@ -1,0 +1,18 @@
+---
+title: Sitemap
+description: English pages and articles.
+lang: en
+locale: en
+alternate: /pt/sitemap/
+layout: page
+---
+<p>{=cdi:i18n.en.ui.sitemapIntro}</p>
+<ul>
+  <li><a href="{=site.url('/en/')}">Home</a></li>
+  <li><a href="{=site.url('/en/blog/')}">Blog</a></li>
+  <li><a href="{=site.url('/en/tags/')}">Topics</a></li>
+  <li><a href="{=site.url('/en/about/')}">About</a></li>
+  {#for post in site.collections.get('posts_en')}
+  <li><a href="{=post.url}">{=post.title}</a></li>
+  {/for}
+</ul>

@@ -1,0 +1,14 @@
+---
+title: Topics
+description: Browse blog articles by topic.
+lang: en
+locale: en
+alternate: /pt/tags/
+layout: page
+---
+<p>{=cdi:i18n.en.ui.tagsIntro}</p>
+<ul>
+  {#for tag in site.collections.get('posts_en').tagsCount}
+    <li><a href="{=site.url('/en/posts/tag/' + tag.name + '/')}">{=tag.name}</a> ({=tag.count})</li>
+  {/for}
+</ul>

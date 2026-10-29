@@ -1,0 +1,18 @@
+---
+layout: page
+lang: en
+locale: en
+alternate: /pt/tags/
+tagging:
+  collection: posts_en
+  link: /en/posts/tag/:tag/
+paginate: true
+---
+{@io.quarkiverse.roq.frontmatter.runtime.model.NormalPage page}
+{#insert /}
+<div class="blog-grid">
+{#for post in site.collections.get(page.data.tagCollection).paginated(page.paginator)}
+  {#roq/postCard post /}
+{/for}
+</div>
+{#include partials/roq-default/pagination.html /}

@@ -1,0 +1,10 @@
+{#include roq-templates/theme-layouts/roq-default/page}
+{@io.quarkiverse.roq.frontmatter.runtime.model.NormalPage page}
+{#insert /}
+<div class="blog-list"><div class="blog-grid">
+{#for post in site.collections.get(page.data.collection).paginated(page.paginator)}
+  {#roq/postCard post /}
+{/for}
+</div></div>
+{#include partials/roq-default/pagination.html /}
+{/include}

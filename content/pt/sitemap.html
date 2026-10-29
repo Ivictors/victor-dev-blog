@@ -1,0 +1,19 @@
+---
+title: Mapa do site
+description: Páginas e artigos em português.
+lang: pt-BR
+locale: pt
+alternate: /en/sitemap/
+aliases: [/sitemap/]
+layout: page
+---
+<p>{=cdi:i18n.pt.ui.sitemapIntro}</p>
+<ul>
+  <li><a href="{=site.url('/pt/')}">Início</a></li>
+  <li><a href="{=site.url('/pt/blog/')}">Blog</a></li>
+  <li><a href="{=site.url('/pt/tags/')}">Assuntos</a></li>
+  <li><a href="{=site.url('/pt/about/')}">Sobre</a></li>
+  {#for post in site.collections.get('posts_pt')}
+  <li><a href="{=post.url}">{=post.title}</a></li>
+  {/for}
+</ul>
