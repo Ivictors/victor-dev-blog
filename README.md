@@ -6,12 +6,6 @@ Este repositório contém o código e os artigos do meu blog técnico, construí
 
 Os artigos partem de casos verificáveis: issues, pull requests e código-fonte. O primeiro texto publicado explica uma race condition no editor do Quarkus Roq e a correção enviada no [PR #1286](https://github.com/quarkiverse/quarkus-roq/pull/1286). Os temas do blog incluem Java, Quarkus, concorrência, engenharia de software e desenvolvimento open source.
 
-## Últimos artigos do blog
-
-- **[Como corrigi uma race condition no Quarkus Roq](https://ivictors.github.io/victor-dev-blog/pt/posts/como-corrigi-uma-race-condition-no-quarkus-roq/)** — investigação de um problema intermitente no editor e da correção na sequência de gravação e reconexão.
-
-Veja também [todos os artigos em português](https://ivictors.github.io/victor-dev-blog/pt/blog/). Atualize esta lista quando publicar um novo texto.
-
 ## Recursos do projeto
 
 - **Português e inglês:** páginas e artigos completos em `/pt/` e `/en/`, com seletor de idioma e traduções da interface em `data/i18n/`.
