@@ -32,3 +32,7 @@ Comparar nomes de campos não basta. “Cliente ativo” em vendas pode não sig
 ACL não é API Gateway. Um gateway roteia ou aplica políticas na borda. A ACL protege o modelo de domínio contra um vocabulário e um contrato externos.
 
 Use o padrão ao integrar um legado, fornecedor ou outro contexto delimitado com regras diferentes. Se os dois modelos já têm o mesmo significado, uma camada de tradução pode acrescentar complexidade sem benefício.
+
+Teste a ACL com códigos desconhecidos, campos ausentes, timeouts e mudanças de versão. Uma tradução que funciona apenas no caminho feliz ainda pode vazar pressupostos externos para o domínio.
+
+**Fonte:** [Microservices.io — Anti-corruption layer](https://microservices.io/patterns/refactoring/anti-corruption-layer.html).

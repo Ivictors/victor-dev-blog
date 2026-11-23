@@ -33,3 +33,5 @@ Show classes, functions, or other implementation details when they answer a conc
 Start with the question and choose the smallest useful zoom. Label responsibilities and arrows, keep related diagrams consistent, and update them when the architecture changes. C4 is a communication tool, not a requirement to draw every level for every system.
 
 **Source:** [C4 model diagrams](https://c4model.com/diagrams).
+
+Every diagram should state its type and scope, name responsibilities, and label relationships with their direction and protocol when relevant. Context and container diagrams often last longer; component and code diagrams change faster. Use only the levels that answer a real question.

@@ -31,3 +31,7 @@ Grant each service only the secrets it needs. Avoid logging values, copying them
 Define what happens when the Secret Manager is unavailable. A short-lived cached value may be acceptable for a bounded period, while a new startup may need to fail closed. Record access for investigation and revoke compromised credentials.
 
 A Secret Manager is not a custom microservice for passwords. Building one adds difficult responsibilities around storage, authentication, availability, rotation, and audit. Integrate a specialized service and keep application data protection separate from secret storage.
+
+The identity check happens before the secret is returned. Prefer workload identities, least-privilege policies, and temporary credentials when the platform supports them. Rotation also requires the application to reload connections safely during the transition.
+
+**Source:** [AWS Secrets Manager best practices](https://docs.aws.amazon.com/secretsmanager/latest/userguide/best-practices.html).

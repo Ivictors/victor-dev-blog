@@ -34,3 +34,7 @@ The composer combines responses. It does not turn updates in several services in
 Parallel calls can reduce latency, but every dependency needs a timeout and a failure policy. Decide whether the screen can show partial data, use a cache, or return an error when one service is unavailable. Also define authorization for each downstream request; composition must not bypass the service that owns the data.
 
 API Composition is a practical read model for distributed data. Its cost is explicit network latency and the need to handle partial failures at the boundary.
+
+Limit fan-out when a request returns a list, or a single page can create an N+1 request pattern. Cache only when freshness and invalidation are explicit. Authorization still belongs to each service that owns the resource.
+
+**Source:** [Microservices.io — API Composition](https://microservices.io/patterns/data/api-composition.html).

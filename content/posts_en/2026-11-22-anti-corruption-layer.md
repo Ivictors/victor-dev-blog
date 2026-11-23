@@ -32,3 +32,7 @@ Matching field names is not enough. “Active customer” in sales may not mean 
 An ACL is not an API Gateway. A gateway routes or applies edge policies. The ACL protects a domain model from an external vocabulary and contract.
 
 Use the pattern when integrating a legacy system, supplier, or another bounded context with different rules. If both models already have the same meaning, a translation layer may add complexity without a benefit.
+
+Test the ACL with unknown codes, missing fields, timeouts, and version changes. A translation that works only for the happy path can still leak external assumptions into the domain.
+
+**Source:** [Microservices.io — Anti-corruption layer](https://microservices.io/patterns/refactoring/anti-corruption-layer.html).

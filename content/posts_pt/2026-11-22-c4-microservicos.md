@@ -33,3 +33,5 @@ Mostre classes, funções ou detalhes de implementação quando eles responderem
 Comece pela pergunta e escolha o menor nível de zoom útil. Nomeie responsabilidades e setas, mantenha os diagramas relacionados coerentes e atualize-os quando a arquitetura mudar. C4 é uma ferramenta de comunicação, não uma exigência de desenhar todos os níveis para todos os sistemas.
 
 **Fonte:** [Diagramas do modelo C4](https://c4model.com/diagrams).
+
+Todo diagrama deve declarar seu tipo e escopo, nomear responsabilidades e rotular relações com direção e protocolo quando necessário. Diagramas de contexto e contêineres costumam durar mais; componentes e código mudam mais rápido. Use apenas os níveis que respondem a uma pergunta real.

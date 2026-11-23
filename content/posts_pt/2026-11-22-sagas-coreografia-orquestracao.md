@@ -35,3 +35,7 @@ Um orquestrador acompanha o estado da saga e envia comandos aos participantes. I
 Se o estoque foi reservado e o pagamento falhou, o sistema pode precisar liberar a reserva. Isso é uma ação de compensação, não uma viagem no tempo: enviar um e-mail ou despachar um pacote pode não ser reversível. Cada serviço define o que a compensação significa para seu estado.
 
 Use coreografia quando o fluxo e as responsabilidades continuarem fáceis de entender. Use orquestração quando um processo explícito, visibilidade e tratamento de falhas forem mais valiosos que um fluxo totalmente descentralizado. Nos dois casos, defina idempotência, timeouts, retries e estado observável antes de prometer consistência.
+
+A saga garante uma sequência de commits locais e compensações de negócio. Ela não oferece a atomicidade de uma transação única entre todos os serviços. Essa diferença deve aparecer no contrato da API e nos alertas operacionais.
+
+**Fonte:** [Microservices.io — Saga pattern](https://microservices.io/patterns/data/saga.html).

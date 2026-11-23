@@ -35,3 +35,7 @@ An orchestrator tracks the saga state and sends commands to participants. It can
 If stock was reserved and payment fails, the system may need to release the reservation. That is a compensating action, not time travel: sending an email or shipping a package may not be reversible. Each service defines what compensation means for its own state.
 
 Choose choreography when the flow and ownership remain easy to understand. Choose orchestration when an explicit process, visibility, and failure handling are more valuable than a fully decentralized flow. In both cases, define idempotency, timeouts, retries, and observable state before promising consistency.
+
+The saga guarantees a sequence of local commits and business compensations. It does not provide the atomicity of one transaction across all services. That distinction should appear in the API contract and in operational alerts.
+
+**Source:** [Microservices.io — Saga pattern](https://microservices.io/patterns/data/saga.html).
