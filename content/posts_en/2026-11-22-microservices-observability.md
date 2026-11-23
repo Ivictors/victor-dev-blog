@@ -33,3 +33,7 @@ Do not put passwords, tokens, or unnecessary personal data into logs and traces.
 Instrumentation is useful when it supports a question: “Which step increased checkout latency?” or “Are payment failures isolated to one provider?” Define the signal, sampling, retention, and alert threshold around that question.
 
 Observability does not prevent failures. It shortens the path from a symptom to an evidence-based explanation, which is essential when a business operation crosses independently deployed services.
+
+Context propagation connects the span created by the caller to the span created by the downstream service. For HTTP, W3C Trace Context is commonly used; for messages, the context belongs in message metadata. Do not propagate credentials or sensitive baggage to external systems.
+
+**Sources:** [OpenTelemetry signals](https://opentelemetry.io/docs/concepts/signals/) and [context propagation](https://opentelemetry.io/docs/concepts/context-propagation/).

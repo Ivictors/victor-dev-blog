@@ -33,3 +33,7 @@ Não coloque senhas, tokens ou dados pessoais desnecessários em logs e traces. 
 Instrumentação é útil quando responde a uma pergunta: “qual etapa aumentou a latência do checkout?” ou “as falhas de pagamento estão isoladas em um provedor?”. Defina sinal, amostragem, retenção e limite de alerta em torno dessa pergunta.
 
 Observabilidade não impede falhas. Ela reduz o caminho entre um sintoma e uma explicação baseada em evidências, algo essencial quando uma operação atravessa serviços implantados de forma independente.
+
+A propagação de contexto conecta o span criado pelo chamador ao span criado pelo serviço downstream. Em HTTP, o W3C Trace Context é usado com frequência; em mensagens, o contexto fica nos metadados. Não propague credenciais ou baggage sensível para sistemas externos.
+
+**Fontes:** [sinais do OpenTelemetry](https://opentelemetry.io/docs/concepts/signals/) e [propagação de contexto](https://opentelemetry.io/docs/concepts/context-propagation/).
