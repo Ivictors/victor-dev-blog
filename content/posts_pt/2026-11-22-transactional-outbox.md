@@ -40,3 +40,7 @@ Dê a cada evento um `eventId` estável. Os consumidores devem reconhecer um eve
 Consultar a tabela periodicamente e ler o log de transações do banco com CDC são estratégias comuns. Escolha de acordo com latência, complexidade operacional e recursos do banco utilizado.
 
 O Outbox é valioso porque torna explícito o limite de falha. Sua garantia termina no commit local e precisa ser completada por consumidores idempotentes.
+
+Para eventos do mesmo agregado, o relay também precisa preservar a ordem exigida pelo domínio. Uma chave estável e uma estratégia de concorrência devem impedir que `PedidoCancelado` seja publicado antes de `PedidoCriado`.
+
+**Fonte:** [Microservices.io — Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html).

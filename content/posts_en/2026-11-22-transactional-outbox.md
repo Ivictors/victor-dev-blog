@@ -40,3 +40,7 @@ Give each event a stable `eventId`. Consumers should recognize an event they hav
 Polling the table and reading the database transaction log through CDC are common relay strategies. Choose according to latency, operational complexity, and the database capabilities you actually run.
 
 The Outbox pattern is valuable because it makes the failure boundary explicit. Its guarantee ends at the local commit and must be completed by idempotent consumers.
+
+For events from the same aggregate, the relay must also preserve the order required by the domain. A stable key and a concurrency strategy should prevent `OrderCancelled` from being published before `OrderCreated`.
+
+**Source:** [Microservices.io — Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html).
