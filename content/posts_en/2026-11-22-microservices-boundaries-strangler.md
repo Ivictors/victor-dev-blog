@@ -39,3 +39,9 @@ If the monolith and the new service write the same tables without an explicit ow
 The new service may need an anti-corruption layer to translate legacy terms into its own domain. This prevents the old model from spreading into the new code while the systems coexist.
 
 Microservices are useful when their boundaries improve independent change. The Strangler Fig approach makes that decision reversible in small steps, but it does not remove the cost of distributed operations.
+
+## How to know the boundary is working
+
+Watch for fewer coordinated deployments, clear ownership of data, and contracts that change independently. A chain of synchronous calls through almost every service or frequent direct access to another service's tables is evidence that the boundary needs review.
+
+**Source:** [Martin Fowler — Microservices](https://martinfowler.com/articles/microservices.html) and [Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html).

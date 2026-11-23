@@ -39,3 +39,9 @@ Se o monólito e o serviço novo escrevem nas mesmas tabelas sem uma regra de pr
 Uma camada anticorrupção pode traduzir termos do legado para o domínio do novo serviço. Isso impede que o modelo antigo se espalhe pelo código novo durante a convivência dos sistemas.
 
 Microsserviços fazem sentido quando seus limites melhoram a evolução independente. O Strangler Fig torna a decisão reversível em etapas pequenas, mas não elimina o custo da operação distribuída.
+
+## Como saber se o limite funciona
+
+Observe se há menos deploys coordenados, propriedade clara dos dados e contratos que evoluem de forma independente. Uma cadeia de chamadas síncronas por quase todos os serviços ou acessos frequentes às tabelas de outro serviço indicam que o limite precisa ser revisado.
+
+**Fontes:** [Martin Fowler — Microservices](https://martinfowler.com/articles/microservices.html) e [Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html).
