@@ -8,7 +8,7 @@ layout: post-localized
 translation-id: secret-manager-microservices
 link: /pt/posts/secret-manager-microservicos/
 alternate: /en/posts/secret-manager-microservices/
-tags: microsservicos, segurança, aws
+tags: microsservicos, seguranca, aws
 author: victor
 ---
 
