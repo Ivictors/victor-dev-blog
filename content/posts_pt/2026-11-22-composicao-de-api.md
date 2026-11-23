@@ -34,3 +34,7 @@ O composer combina respostas. Ele não transforma atualizações em vários serv
 Chamadas paralelas podem reduzir latência, mas cada dependência precisa de timeout e política de falha. Decida se a tela pode mostrar dados parciais, usar cache ou retornar erro quando um serviço estiver indisponível. Defina também a autorização de cada chamada; composição não deve contornar o serviço dono do dado.
 
 API Composition é um modelo de leitura prático para dados distribuídos. O custo é a latência explícita da rede e o tratamento de falhas parciais na fronteira.
+
+Limite o fan-out quando a requisição retorna uma lista, pois uma única tela pode criar um padrão de chamadas N+1. Use cache apenas quando validade e invalidação forem explícitas. A autorização continua pertencendo a cada serviço dono do recurso.
+
+**Fonte:** [Microservices.io — API Composition](https://microservices.io/patterns/data/api-composition.html).
