@@ -31,3 +31,7 @@ Conceda a cada serviço somente os segredos necessários. Evite registrar valore
 Defina o comportamento quando o Secret Manager estiver indisponível. Um valor em cache de curta duração pode ser aceitável por um período limitado, enquanto uma nova inicialização pode precisar falhar de forma fechada. Registre acessos para investigação e revogue credenciais comprometidas.
 
 Um Secret Manager não é um microserviço próprio para senhas. Criá-lo adiciona responsabilidades difíceis de armazenamento, autenticação, disponibilidade, rotação e auditoria. Integre uma solução especializada e mantenha a proteção dos dados de negócio separada do armazenamento de segredos.
+
+A verificação da identidade acontece antes de o segredo ser entregue. Prefira identidades de workload, políticas de menor privilégio e credenciais temporárias quando a plataforma oferecer esses recursos. A rotação também exige que a aplicação renove conexões com segurança durante a transição.
+
+**Fonte:** [boas práticas do AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/best-practices.html).
