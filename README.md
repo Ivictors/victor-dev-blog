@@ -56,3 +56,16 @@ O computador local não precisa ficar ligado: o GitHub Pages serve os arquivos e
 ## Contato
 
 - [LinkedIn](https://www.linkedin.com/in/vi-marques/)
+
+## Padrão de documentação e configuração
+
+Este repositório existe para publicar artigos técnicos bilíngues sobre engenharia de software. O README acima apresenta o escopo, a arquitetura e as tecnologias específicas do projeto; esta seção padroniza o ponto de entrada para quem deseja reproduzi-lo localmente.
+
+### Clonar e configurar
+
+~~~powershell
+git clone https://github.com/Ivictors/victor-dev-blog.git
+cd victor-dev-blog
+~~~
+
+Consulte os pré-requisitos e comandos de execução descritos neste README antes de iniciar. Use variáveis de ambiente, arquivos locais ignorados pelo Git e serviços de desenvolvimento para credenciais; não substitua placeholders por segredos no README e não versione chaves, tokens ou senhas.
